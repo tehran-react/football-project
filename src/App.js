@@ -1,8 +1,7 @@
-import './App.css';
 import Football from './components/football.jsx'
 function App() {
   return (
-    <div className="App">
+    <div>
       <Football />
     </div>
   );

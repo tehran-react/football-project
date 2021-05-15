@@ -1,0 +1,20 @@
+.Main {
+    width: 50%;
+    margin: 50px auto;
+}
+.title {
+    padding: 5px 0;
+    width: 100%;
+    text-align: right;
+    border-bottom: 1px solid black;
+}
+.select {
+    width: 220px;
+    height: 25px;
+    margin-top: 10px;
+}
+.flexStyle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
