@@ -1,10 +1,11 @@
 .Main {
     width: 50%;
+    height: 800px;
     margin: 50px auto;
+    background-color: pink;
 }
 .title {
-    padding: 5px 0;
-    width: 100%;
+    padding: 10px;
     text-align: right;
     border-bottom: 1px solid black;
 }
@@ -14,7 +15,56 @@
     margin-top: 10px;
 }
 .flexStyle {
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+.flexStyle1 {
+    margin-top: 10px;
+    margin-left: 10px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+}
+.buttonWeeks{
+    background-color: blueviolet;
+    padding: 10px;
+    font-size: 14px;
+    color: white;
+    border-radius: 4px;
+    z-index: 10;
+}
+.closeButton{
+    background-color: red;
+    padding: 5px;
+    font-size: 14px;
+    color: black;
+    border-radius: 20px;
+    z-index: 10;
+}
+.flexStyle2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.options {
+    color: black;
+}
+.kkk {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.modal {
+    z-index: 20;
+    overflow-y: scroll;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    box-shadow: teal;
+    background-color: white;
+    color: black;
 }
