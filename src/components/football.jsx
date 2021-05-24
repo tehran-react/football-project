@@ -3,10 +3,12 @@ import "./football.css";
 import axios from "axios";
 
 function Football() {
+  const [hey, setHey] = useState([]);
   // const [week, setSelectedValue] = useState('');
   const [showText, setShowText] = useState(false);
   const [week, setWeek] = useState([]);
   const [matche, setMatch] = useState([]);
+
   useEffect(() => {
     let data = {
       headers: {
@@ -31,17 +33,12 @@ function Football() {
     item.id = i + 1;
     item.value = item.id + "هفته";
   });
-  const taabe = (id) => {
+  function taabe(id) {
     const selectedWeek = groups.filter((group) => {
       return group.id === id;
     });
-    if(setWeek( selectedWeek)){
-      console.log('sdfsdf');
-    }else{
-      console.log('hhh');
-    }
-    console.log("selectedWeek", selectedWeek);
-    console.log("useState:", week);
+    setWeek(selectedWeek);
+    console.log(week);
   };
 
   const openModal = () => setShowText(true);
@@ -76,11 +73,13 @@ function Football() {
             </div>
           ) : null}
         </div>
-        {/* <div>{selectedValue.map(item =>{
+        <div>{week.map(item =>{
           return(
-            <div id={item.id}>khare babam</div>
+            <div id={item.id}>
+              
+            </div>
           )
-        })}</div> */}
+        })}</div>
       </div>
     </div>
   );
