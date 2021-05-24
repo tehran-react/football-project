@@ -3,8 +3,6 @@ import "./football.css";
 import axios from "axios";
 
 function Football() {
-  const [hey, setHey] = useState([]);
-  // const [week, setSelectedValue] = useState('');
   const [showText, setShowText] = useState(false);
   const [week, setWeek] = useState([]);
   const [matche, setMatch] = useState([]);
@@ -33,14 +31,17 @@ function Football() {
     item.id = i + 1;
     item.value = item.id + "هفته";
   });
-  function taabe(id) {
-    const selectedWeek = groups.filter((group) => {
-      return group.id === id;
-    });
-    setWeek(selectedWeek);
-    console.log(week);
+  const taabe = (event) => {
+    setWeek(
+      ...groups.filter((group) => {
+        return group.id === event;
+      })
+    );
+    setTimeout(() => {
+      setShowText(false);
+    }, 100);
   };
-
+  console.log(week);
   const openModal = () => setShowText(true);
   const closeModal = () => setShowText(false);
   console.log(showText);
@@ -72,14 +73,31 @@ function Football() {
               </div>
             </div>
           ) : null}
+          <div>
+            {week.map((item) => {
+              return (
+                <div className="games borderBottom" key={item.id}>
+                  <div className="mb">تاریخ: {item.season.startDate}</div>
+                  <div className="game mb">
+                    <div>{item.awayTeam.name}</div>
+                    <div className="mRight">
+                      <div className="flexStyle">
+                        <span>{item.score.fullTime.awayTeam}</span>
+                        <span>-</span>
+                        <span>{item.score.fullTime.homeTeam}</span>
+                      </div>
+                      <span>{item.status}</span>
+                    </div>
+                    <div className="mRight">{item.homeTeam.name}</div>
+                  </div>
+                  <div className="davara mb">
+                    <span className="esm">اسامی داوران :</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
-        <div>{week.map(item =>{
-          return(
-            <div id={item.id}>
-              
-            </div>
-          )
-        })}</div>
       </div>
     </div>
   );
