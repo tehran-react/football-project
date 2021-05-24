@@ -55,7 +55,7 @@
   cursor: pointer;
 }
 .borderBottom {
-  border-bottom: 1px solid black;
+  border-bottom: 2px solid black;
 }
 .mRight {
   margin-right: 20px;
@@ -78,7 +78,13 @@
   direction: rtl;
   text-align: right;
 }
+.esmDavara {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .davara {
+  direction: rtl;
   display: flex;
   width: 400px;
   padding: 10px 20px;

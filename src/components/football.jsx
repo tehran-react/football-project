@@ -92,6 +92,15 @@ function Football() {
                   </div>
                   <div className="davara mb">
                     <span className="esm">اسامی داوران :</span>
+                    <div>
+                      {item.referees.map((item) => {
+                        return (
+                          <div className="esmDavara">
+                            <span>{item.name}</span>
+                          </div>
+                        );
+                      })}
+                    </div>
                   </div>
                 </div>
               );
