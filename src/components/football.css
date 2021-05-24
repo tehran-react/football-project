@@ -1,6 +1,6 @@
 .Main {
   width: 50%;
-  height: 2500px;
+  min-height: 500px;
   margin: 50px auto;
   background-color: pink;
 }
@@ -30,7 +30,7 @@
 .buttonWeeks {
   background-color: blueviolet;
   padding: 10px;
-  font-size: 14px;
+  font-size: 16px;
   color: white;
   border-radius: 4px;
   z-index: 10;
