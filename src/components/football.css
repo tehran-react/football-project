@@ -1,5 +1,7 @@
 .Main {
   width: 50%;
+  border: 1px solid gray;
+  border-radius: 5px;
   min-height: 500px;
   margin: 50px auto;
   background-color: pink;
